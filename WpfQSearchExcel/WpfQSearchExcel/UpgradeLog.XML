@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="WpfQSearchExcel">
+</Property><Property Name="Solution File" Value="E:\Z\Project\WpfQSearchExcel\WpfQSearchExcel\WpfQSearchExcel.sln">
+</Property><Property Name="User Options File" Value="E:\Z\Project\WpfQSearchExcel\WpfQSearchExcel\WpfQSearchExcel.suo">
+</Property><Property Name="Date" Value="2011年3月27日">
+</Property><Property Name="Time" Value="12:20">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="WpfQSearchExcel.sln" Description="File successfully backed up as E:\Z\Project\WpfQSearchExcel\WpfQSearchExcel\Backup\WpfQSearchExcel.sln">
+</Event><Event ErrorLevel="0" Project="" Source="WpfQSearchExcel.suo" Description="File successfully backed up as E:\Z\Project\WpfQSearchExcel\WpfQSearchExcel\Backup\WpfQSearchExcel.suo">
+</Event><Event ErrorLevel="0" Project="WpfQSearchExcel" Source="WpfQSearchExcel.csproj" Description="Project file successfully backed up as E:\Z\Project\WpfQSearchExcel\WpfQSearchExcel\Backup\WpfQSearchExcel.csproj">
+</Event><Event ErrorLevel="0" Project="WpfQSearchExcel" Source="App.xaml.cs" Description="File successfully backed up as E:\Z\Project\WpfQSearchExcel\WpfQSearchExcel\Backup\App.xaml.cs">
+</Event><Event ErrorLevel="0" Project="WpfQSearchExcel" Source="ExcelTools.cs" Description="File successfully backed up as E:\Z\Project\WpfQSearchExcel\WpfQSearchExcel\Backup\ExcelTools.cs">
+</Event><Event ErrorLevel="0" Project="WpfQSearchExcel" Source="Properties\AssemblyInfo.cs" Description="File successfully backed up as E:\Z\Project\WpfQSearchExcel\WpfQSearchExcel\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="WpfQSearchExcel" Source="Properties\Resources.Designer.cs" Description="File successfully backed up as E:\Z\Project\WpfQSearchExcel\WpfQSearchExcel\Backup\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="WpfQSearchExcel" Source="Properties\Settings.Designer.cs" Description="File successfully backed up as E:\Z\Project\WpfQSearchExcel\WpfQSearchExcel\Backup\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="WpfQSearchExcel" Source="PySearch.cs" Description="File successfully backed up as E:\Z\Project\WpfQSearchExcel\WpfQSearchExcel\Backup\PySearch.cs">
+</Event><Event ErrorLevel="0" Project="WpfQSearchExcel" Source="QSearchExcel.xaml.cs" Description="File successfully backed up as E:\Z\Project\WpfQSearchExcel\WpfQSearchExcel\Backup\QSearchExcel.xaml.cs">
+</Event><Event ErrorLevel="0" Project="WpfQSearchExcel" Source="Properties\Settings.settings" Description="File successfully backed up as E:\Z\Project\WpfQSearchExcel\WpfQSearchExcel\Backup\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="WpfQSearchExcel" Source="Properties\Resources.resx" Description="File successfully backed up as E:\Z\Project\WpfQSearchExcel\WpfQSearchExcel\Backup\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="WpfQSearchExcel" Source="App.xaml" Description="File successfully backed up as E:\Z\Project\WpfQSearchExcel\WpfQSearchExcel\Backup\App.xaml">
+</Event><Event ErrorLevel="0" Project="WpfQSearchExcel" Source="QSearchExcel.xaml" Description="File successfully backed up as E:\Z\Project\WpfQSearchExcel\WpfQSearchExcel\Backup\QSearchExcel.xaml">
+</Event><Event ErrorLevel="0" Project="WpfQSearchExcel" Source="WpfQSearchExcel.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="WpfQSearchExcel" Source="WpfQSearchExcel.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="" Source="WpfQSearchExcel.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="WpfQSearchExcel.sln" Description="Converted">
+</Event><Event ErrorLevel="0" Project="WpfQSearchExcel" Source="WpfQSearchExcel.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

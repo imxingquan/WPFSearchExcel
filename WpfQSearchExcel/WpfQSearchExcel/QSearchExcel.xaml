@@ -1,0 +1,94 @@
+﻿<Window x:Class="WpfQSearchExcel.QSearchExcel"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
+    Title="QSearchExcel" Height="577" Width="804" WindowStyle="SingleBorderWindow" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"  Focusable="True" FontSize="12" d:IsStaticText="True">
+	<Window.Background>
+		<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+			<GradientStop Color="#FF000000" Offset="0.178"/>
+			<GradientStop Color="#FF333333" Offset="1"/>
+		</LinearGradientBrush>
+	</Window.Background>
+    <DockPanel Margin="10,20,10,10" Opacity="0.995" RenderTransformOrigin="0.515,0.528" Background="{x:Null}" ClipToBounds="False">
+
+    	<DockPanel DockPanel.Dock="Top" Background="{DynamicResource {x:Static SystemColors.ControlDarkDarkBrushKey}}">
+    		<Menu  x:Name="menu1" VerticalAlignment="Center" Foreground="#FFE8DADA"  >
+    			<Menu.Background>
+    				<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkDarkColorKey}}"/>
+    			</Menu.Background>
+    			<MenuItem Header="文件(_F)" >
+    				<MenuItem.Foreground>
+    					<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
+    				</MenuItem.Foreground>
+    				<MenuItem Header="打开(_O)" Click="OpenMenuItem_Click"  />
+    				<Separator />
+    				<MenuItem x:Name="aboutMeMenuItem" Header="关于(_A)" Click="aboutMeMenuItem_Click"   />
+    				<MenuItem x:Name="exitMenuItem" Header="退出(_X)"  InputGestureText="Ctrl+X" Click="exitMenuItem_Click"  />
+    			</MenuItem>
+                
+    			<MenuItem Header="选择列(_C)" x:Name="columnMenuItem">
+    				<MenuItem.Foreground>
+    					<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
+    				</MenuItem.Foreground>
+    			</MenuItem>
+
+    		</Menu>
+    		<Label Target="{Binding ElementName=keyTextbox}" Content="搜索栏(_K):" VerticalAlignment="Center" >
+    			<Label.Foreground>
+    				<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
+    			</Label.Foreground>
+    		</Label>
+    		<Border Opacity="0.715" Background="#FF585959" BorderThickness="1,1,1,1" CornerRadius="5,5,5,5" VerticalAlignment="Center" BorderBrush="#FF7F7F7F" Margin="0,1,0,1" >
+    			<TextBox  x:Name="keyTextbox"  Height="23" Margin="5,2,1,2"  Width="214" VerticalAlignment="Center" TextChanged="keyTextBox_TextChanged" ClipToBounds="False" RenderTransformOrigin="0.5,0.5" d:IsStaticText="True" AllowDrop="False" BorderThickness="4,4,4,4" Opacity="1" SnapsToDevicePixels="False" Grid.IsSharedSizeScope="False" ScrollViewer.CanContentScroll="False" TextBox.Padding="1,1,1,1" SpellCheck.IsEnabled="False" Background="#00FFFFFF" BorderBrush="#00000000" Foreground="#FFFFFFFF" >
+    				<TextBox.LayoutTransform>
+    					<TransformGroup>
+    						<ScaleTransform CenterX="0.35" CenterY="0.8" ScaleX="1" ScaleY="1"/>
+    						<SkewTransform AngleX="0" AngleY="0" CenterX="0.35" CenterY="0.8"/>
+    						<RotateTransform Angle="0" CenterX="0.35" CenterY="0.8"/>
+    						<TranslateTransform X="8" Y="0"/>
+    					</TransformGroup>
+    				</TextBox.LayoutTransform>
+    				<TextBox.RenderTransform>
+    					<TransformGroup>
+    						<ScaleTransform ScaleX="1" ScaleY="1"/>
+    						<SkewTransform AngleX="0" AngleY="0"/>
+    						<RotateTransform Angle="0"/>
+    						<TranslateTransform X="0" Y="0"/>
+    					</TransformGroup>
+    				</TextBox.RenderTransform>
+    			</TextBox>
+    		</Border>
+    		<CheckBox x:Name="isPyChkbox" VerticalAlignment="Center" IsChecked="True" Content="简拼(_P)" Foreground="#FFD3CFC7" BorderThickness="2,2,2,2" Margin="5,0,0,0">
+    			<CheckBox.BorderBrush>
+    				<SolidColorBrush Color="#FF0F0F0F"/>
+    			</CheckBox.BorderBrush>
+    			<CheckBox.Background>
+    				<SolidColorBrush Color="#FF464646"/>
+    			</CheckBox.Background>
+    		</CheckBox>
+    		<WrapPanel DockPanel.Dock="Right" HorizontalAlignment="Right">
+    			<TextBlock VerticalAlignment="Center" Background="#FF404040" >
+    				<TextBlock.Foreground>
+    					<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
+    				</TextBlock.Foreground><Run Text="表名:"/></TextBlock>
+    			<Border BorderThickness="2,2,2,2" CornerRadius="5,5,5,5" Background="#72FFFFFF">
+    				<ComboBox x:Name="tableNameComboBox" Width="70" Height="21" SelectionChanged="tableNameComboBox_SelectionChanged" IsReadOnly="True" Background="#00FFFFFF"/>
+    			</Border>
+    		</WrapPanel>
+    	</DockPanel>
+
+    
+    	<StatusBar Height="27" x:Name="statusBar1" DockPanel.Dock="Bottom"  VerticalAlignment="Bottom" FlowDirection="RightToLeft" Background="#FF353535">
+            
+    		<Slider Height="21" x:Name="slider1" Width="100" FlowDirection="LeftToRight"  ValueChanged="slider1_ValueChanged" Minimum="10" Value="10" SmallChange="1" Maximum="15" AutoToolTipPlacement="None" TickPlacement="None" BorderBrush="{x:Null}" Foreground="#FF4C4C4C" OpacityMask="{x:Null}" Background="#FF353535" />
+
+    	</StatusBar>
+		<Grid>
+        <my:WindowsFormsHost  x:Name="windowsFormsHost1" xmlns:my="clr-namespace:System.Windows.Forms.Integration;assembly=WindowsFormsIntegration" d:IsHidden="True" d:IsLocked="True" >
+            <wf:DataGridView x:Name="dataGridView1" BackgroundColor="#FF595959"  AllowUserToAddRows="False" AllowUserToDeleteRows="False" AutoSizeColumnsMode="DisplayedCells"  ScrollBars="Both"  ReadOnly="True" AllowUserToOrderColumns="True"  />
+        </my:WindowsFormsHost>
+		</Grid>
+    </DockPanel>
+
+</Window>
